@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import { FastFoodProvider } from "../context/FastFoodProvider";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <FastFoodProvider>
+      <Component {...pageProps} />
+    </FastFoodProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;
